@@ -15,4 +15,10 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Application\LendingApplication.Contract\LendingApplication.Contract.csproj" />
+    <ProjectReference Include="..\Domain\LendingDomain\LendingDomain.csproj" />
+    <ProjectReference Include="..\SimpleLendingPersistence\SimpleLendingPersistence\SimpleLendingPersistence.csproj" />
+  </ItemGroup>
+
 </Project>
