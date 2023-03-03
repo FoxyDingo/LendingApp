@@ -67,5 +67,8 @@ namespace LendingApp.UI
 
         //TODO
         //Create UI to display loan metrics and call ILoanProcessor to present metrics
+
+        //TODO
+        //Populate UI labels / buttons with strings from Resources file
     }
 }
