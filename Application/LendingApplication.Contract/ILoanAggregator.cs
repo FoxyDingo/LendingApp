@@ -16,6 +16,12 @@ namespace LendingApp.LendingApplication.Contract
         public IList<Loan> GetLoans();
 
         /// <summary>
+        /// Get all Loans in the system that match a certain LoanState
+        /// </summary>
+        /// <returns>List of all loans currently saved to the system</returns>
+        public IList<Loan> GetLoans(LoanState loanState);
+
+        /// <summary>
         /// Add Loan to the system
         /// </summary>
         /// <param name="loan">The loan to add</param>

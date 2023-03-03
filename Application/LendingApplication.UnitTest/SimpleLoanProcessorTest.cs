@@ -1,15 +1,14 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace LendingApp.SimpleLendingPersistence.UnitTest
+namespace LendingApp.LendingApplication.UnitTest
 {
     [TestClass]
-    public class UnitTest1
+    public class SimpleLoanProcessorTest
     {
         //TODO
         //Create test methods using Moq and dependency injection
         //Create tests for boundary testing, success scenarios and failure scenarios
         //using the Arrange Act Assert pattern
-
         [TestMethod]
         public void TestMethod1()
         {

@@ -17,8 +17,24 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Application\LendingApplication.Contract\LendingApplication.Contract.csproj" />
+    <ProjectReference Include="..\Application\LendingApplication\LendingApplication.csproj" />
     <ProjectReference Include="..\Domain\LendingDomain\LendingDomain.csproj" />
     <ProjectReference Include="..\SimpleLendingPersistence\SimpleLendingPersistence\SimpleLendingPersistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

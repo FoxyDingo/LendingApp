@@ -52,5 +52,10 @@ namespace LendingApp.SimpleLendingPersistence
 
             return true;
         }
+
+        public IList<Loan> GetLoans(LoanState loanState)
+        {
+            return Loans.Where(loan => loan.LoanState == loanState).ToList();
+        }
     }
 }

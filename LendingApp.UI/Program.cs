@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LendingApp.LendingApplication;
 using LendingApp.LendingApplication.Contract;
 using LendingApp.SimpleLendingPersistence;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,13 +27,13 @@ namespace LendingApp.UI
 
             var services = new ServiceCollection();
             services.AddSingleton(typeof(ILoanAggregator), new SimpleLoanAggregator(loggerFactory));
-
+            services.AddSingleton(typeof(ILoanProcessor), new SimpleLoanProcessor(services));
 
 
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new LendingView(services, loggerFactory));
         }
     }
 }
